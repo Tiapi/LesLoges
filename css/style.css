@@ -18,3 +18,8 @@
     font-family: "vietnam", sans-serif;
     font-weight: 400; /* Utilisation du poids normal */
 }
+
+.h1 {
+    font-family: "vietnam", sans-serif;
+    font-weight: 700; /* Utilisation du poids medium */
+}
