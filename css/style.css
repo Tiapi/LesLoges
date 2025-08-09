@@ -1,0 +1,20 @@
+/* Déclaration pour poids normal */
+@font-face {
+    font-family: "vietnam";
+    src: url("fonts/BeVietnamPro-Regular.ttf") format("truetype");
+    font-weight: 400; /* Regular */
+    font-style: normal;
+}
+
+/* Déclaration pour medium */
+@font-face {
+    font-family: "vietnam";
+    src: url("fonts/BeVietnamPro-Medium.ttf") format("truetype");
+    font-weight: 700; /* medium */
+    font-style: normal;
+}
+
+.body {
+    font-family: "vietnam", sans-serif;
+    font-weight: 400; /* Utilisation du poids normal */
+}
