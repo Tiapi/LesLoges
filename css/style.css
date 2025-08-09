@@ -131,8 +131,8 @@ html {
 .hero__logos {
     background-color: rgb(71, 48, 185);
     position: absolute;
-    bottom: 2rem;
-    left: 2rem;
+    bottom: 1rem;
+    left: 1rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
