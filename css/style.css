@@ -13,6 +13,47 @@
     font-weight: 700; /* medium */
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
+
+/* Reset du body */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style du héros */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(185, 48, 48);
+    position: relative;
+    cursor: pointer;
+}
+
+/* Container pour les logos */
+.hero__logos {
+    background-color: rgb(71, 48, 185);
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Style des logos */
+.hero__logo {
+    max-width: 200px;
+    height: auto;
+}
+
+/* Assure que le contenu principal commence immédiatement après le héros */
+#main-content {
+    min-height: 200vh;
+    background-color: #3cbe4c;
+}
 
 h1 {
     font-family: "vietnam", sans-serif;
