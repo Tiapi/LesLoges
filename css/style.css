@@ -14,6 +14,14 @@
     font-style: normal;
 }
 
+body {
+    font-family: "vietnam", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    margin: 0; /* Ajout pour éviter les marges par défaut */
+}
+
 header {
     background-color: white;
     padding: 5px 0;
@@ -57,7 +65,7 @@ nav li::before {
     position: absolute;
     right: -6px;
     top: -10px; /* remonte pour recouvrir la border-top (3px) */
-    bottom: -2.75px; /* descend pour recouvrir la border-bottom (3px) */
+    bottom: -7.7px; /* descend pour recouvrir la border-bottom (3px) */
     width: 15px; /* largeur du recouvrement (ajuste si nécessaire) */
     background: white; /* doit correspondre au background du header */
     z-index: 1;
