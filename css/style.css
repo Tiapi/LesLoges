@@ -14,7 +14,16 @@
     font-style: normal;
 }
 
-body {
+h1 {
     font-family: "vietnam", sans-serif;
+    font-size: 3rem;
+    font-weight: 700; /* Utilisation du poids normal */
+    letter-spacing: -0.18rem;
+}
+
+p {
+    font-family: "vietnam", sans-serif;
+    font-size: 1.2rem;
     font-weight: 400; /* Utilisation du poids normal */
+    letter-spacing: 0rem;
 }
