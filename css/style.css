@@ -22,82 +22,82 @@ header {
         justify-content: space-between;
         border-top: black 3px solid;
         border-bottom: black 3px solid;
-    }
+}
 
-    nav {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-self: center;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
-    nav li {
-        height: 100%;
-        width: 25%;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        border-right: 3px solid black; /* ligne entre les boutons */
-        position: relative;
-    }
+nav li {
+    height: 100%;
+    width: 25%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 3px solid black; /* ligne entre les boutons */
+    position: relative;
+}
 
-    nav li::before {
-        content: "";
-        position: absolute;
-        right: -6px;
-        top: -10px;      /* remonte pour recouvrir la border-top (3px) */
-        bottom: -2.75px;   /* descend pour recouvrir la border-bottom (3px) */
-        width: 15px;    /* largeur du recouvrement (ajuste si nécessaire) */
-        background: white; /* doit correspondre au background du header */
-        z-index: 1;
-        pointer-events: none; /* ne bloque pas les clics */
-    }
+nav li::before {
+    content: "";
+    position: absolute;
+    right: -6px;
+    top: -10px;      /* remonte pour recouvrir la border-top (3px) */
+    bottom: -2.75px;   /* descend pour recouvrir la border-bottom (3px) */
+    width: 15px;    /* largeur du recouvrement (ajuste si nécessaire) */
+    background: white; /* doit correspondre au background du header */
+    z-index: 1;
+    pointer-events: none; /* ne bloque pas les clics */
+}
 
-    nav li::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        top: 6px;      /* espace du trou en haut */
-        bottom: 6px;   /* espace du trou en bas */
-        width: 3px;
-        z-index: 2;
-        background-color: black;
-    }
-    
-    nav li + li {
-        border-left: none; /* éviter double ligne entre les boutons */
-    }
+nav li::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;      /* espace du trou en haut */
+    bottom: 6px;   /* espace du trou en bas */
+    width: 3px;
+    z-index: 2;
+    background-color: black;
+}
 
-    nav li:last-child {
-        border-right: none; /* pas de ligne après le dernier bouton */
-    }
+nav li + li {
+    border-left: none; /* éviter double ligne entre les boutons */
+}
 
-    nav li:last-child::before,
-    nav li:last-child::after {
-        display: none;
-    }
+nav li:last-child {
+    border-right: none; /* pas de ligne après le dernier bouton */
+}
+
+nav li:last-child::before,
+nav li:last-child::after {
+    display: none;
+}
 
 
-    nav a {
-        text-decoration: none;
-        color: black;
-        display: block;
-    }
+nav a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
 
-    nav li:hover {
-        text-decoration: underline;
-    }
+nav li:hover {
+    text-decoration: underline;
+}
 
 html {
     scroll-behavior: smooth;
