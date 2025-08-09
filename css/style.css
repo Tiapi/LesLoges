@@ -131,16 +131,19 @@ html {
 .hero__logos {
     background-color: rgb(71, 48, 185);
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem; /* Ajout pour voir le container même sans images */
-    min-width: 200px; /* Ajout pour voir le container même sans images */
+    min-width: 50%; /* Ajout pour voir le container même sans images */
     min-height: 100px; /* Ajout pour voir le container même sans images */
 }
 
+.hero__logo path {
+    fill: red;
+}
 /* Contenu principal */
 #main-content {
     min-height: 100vh;
