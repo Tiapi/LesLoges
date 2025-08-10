@@ -120,15 +120,16 @@ html {
 /* Style du héros */
 .hero {
     height: 100vh;
-    background-color: rgb(176, 82, 82);
+    background-color: rgb(255, 255, 255);
     position: relative;
     cursor: pointer;
     display: flex; /* Ajout */
+    overflow: hidden;
 }
 
 /* Container pour les logos */
 .hero__logos {
-    background-color: rgb(90, 36, 205);
+    background-color: rgb(255, 255, 255);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -141,7 +142,7 @@ html {
     padding-bottom: 0.95%; /* un peu moins en bas */
     padding-top: 7vh; /* si besoin, même que le bas */
     padding-right: 7vh;
-    width: 65%; /* Ajout pour voir le container même sans images */
+    width: 72%; /* Ajout pour voir le container même sans images */
     height: 65%; /* Ajout pour voir le container même sans images */
 }
 
@@ -152,10 +153,54 @@ html {
     align-self: flex-start;
 }
 
+/* Animations pour les SVG */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100vw);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInTop {
+    from {
+        transform: translateY(-100vh);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Style des logos avec animation */
+.Les {
+    fill: rgb(0, 0, 0);
+    display: block;
+    align-self: flex-start;
+    opacity: 0;
+
+    animation: slideInTop 0.8s ease-out forwards;
+    /* animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    animation-delay: 0.4s; /* Commence légèrement plus tôt */
+}
+
+.Loges {
+    fill: rgb(0, 0, 0);
+    display: block;
+    opacity: 0;
+    align-self: flex-start;
+    animation: slideInRight 0.8s ease-out forwards;
+    animation-delay: 0.4s; /* Commence plus tard */
+}
+
 /* Contenu principal */
 #main-content {
     min-height: 100vh;
-    background-color: #3cbe4c;
+    background-color: #ffffff;
     margin-top: 0; /* Important */
 }
 
