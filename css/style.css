@@ -144,16 +144,16 @@ html {
     padding-right: 1%;
     width: 65%; /* Ajout pour voir le container même sans images */
     height: 65%; /* Ajout pour voir le container même sans images */
-    min-width: 400px;
 }
 
 .Les,
 .Loges {
     fill: rgb(0, 0, 0);
+    align-self: flex-start; /* renforce l’alignement à gauche */
 }
 
 .Les {
-    width: 53.5%;
+    width: 100%;
 }
 
 .Loges {
