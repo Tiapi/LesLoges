@@ -140,8 +140,8 @@ html {
     gap: 2%;
     padding-left: 1.2%; /* un peu plus large à gauche */
     padding-bottom: 0.95%; /* un peu moins en bas */
-    padding-top: 1%; /* si besoin, même que le bas */
-    padding-right: 1%;
+    padding-top: 7vh; /* si besoin, même que le bas */
+    padding-right: 7vh;
     width: 65%; /* Ajout pour voir le container même sans images */
     height: 65%; /* Ajout pour voir le container même sans images */
 }
@@ -149,7 +149,9 @@ html {
 .Les,
 .Loges {
     fill: rgb(0, 0, 0);
-    width: 100%;
+    display: block; /* empêche un centrage implicite */
+    margin-left: 0; /* pas de marge auto */
+    align-self: flex-start;
 }
 
 .Les {
