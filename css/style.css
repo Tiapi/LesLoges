@@ -187,8 +187,8 @@ html {
     align-self: flex-start;
     opacity: 0;
 
-    animation: slideInTop 0.8s ease-out forwards;
-    /* animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+    animation: slideInTop 0.8s forwards;
+    animation-timing-function: cubic-bezier(0.3, 0.8, 0.05, 1.05);
     animation-delay: 0.4s; /* Commence légèrement plus tôt */
 }
 
@@ -197,14 +197,15 @@ html {
     display: block;
     opacity: 0;
     align-self: flex-start;
-    animation: slideInRight 0.8s ease-out forwards;
-    animation-delay: 0.4s; /* Commence plus tard */
+    animation: slideInRight 0.8s forwards;
+    animation-timing-function: cubic-bezier(0.3, 0.8, 0.05, 1.05);
+    animation-delay: 0.5s; /* Commence plus tard */
 }
 
 /* Contenu principal */
 #main-content {
     min-height: 100vh;
-    background-color: #8a3939;
+    background-color: #ffffff;
     margin-top: 0; /* Important */
 }
 
