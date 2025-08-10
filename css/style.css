@@ -67,7 +67,11 @@ nav li::before {
     top: -8px; /* remonte pour recouvrir la border-top (3px) */
     bottom: -8px; /* descend pour recouvrir la border-bottom (3px) */
     width: 15px; /* largeur du recouvrement (ajuste si nécessaire) */
-    background: rgb(9, 234, 5); /* doit correspondre au background du header */
+    background: rgb(
+        255,
+        255,
+        255
+    ); /* doit correspondre au background du header */
     z-index: 1;
     pointer-events: none; /* ne bloque pas les clics */
 }
