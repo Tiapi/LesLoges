@@ -141,8 +141,17 @@ html {
     min-height: 100px; /* Ajout pour voir le container même sans images */
 }
 
-.hero__logo path {
-    fill: red;
+.Les,
+.Loges {
+    fill: rgb(0, 0, 0);
+}
+
+.Les {
+    width: 53.5%;
+}
+
+.Loges {
+    width: 100%;
 }
 /* Contenu principal */
 #main-content {
