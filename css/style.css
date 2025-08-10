@@ -149,16 +149,14 @@ html {
 .Les,
 .Loges {
     fill: rgb(0, 0, 0);
-    align-self: flex-start; /* renforce l’alignement à gauche */
+    width: 100%;
 }
 
 .Les {
-    width: 100%;
+    background-color: salmon;
+    align-self: left;
 }
 
-.Loges {
-    width: 100%;
-}
 /* Contenu principal */
 #main-content {
     min-height: 100vh;
