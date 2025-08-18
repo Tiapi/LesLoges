@@ -244,11 +244,46 @@ p {
 .container {
     background-color: seagreen;
     position: fixed;
+
     width: 100%;
     height: auto;
-    top: 200px;
+    overflow: hidden;
+    top: 100px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+}
+
+.images {
+    width: 50%;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+    justify-content: left;
+    padding-right: 15px;
+}
+.texte {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(4, 255, 0);
+    justify-content: left;
+    padding-left: 15px;
+}
+
+.textpro {
+    font-family: "vietnam", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400; /* Utilisation du poids normal */
+    letter-spacing: 0rem;
+    padding-right: 20%;
+    color: black;
+}
+
+.titlepro {
+    font-family: "vietnam", sans-serif;
+    font-size: 5rem;
+    font-weight: 700; /* Utilisation du poids medium */
+    letter-spacing: -0.1rem;
+    color: black;
+    line-height: 4rem;
 }
