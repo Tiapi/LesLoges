@@ -368,3 +368,16 @@ p {
     display: flex;
     justify-content: space-between;
 }
+
+.nextpro {
+    background-color: rgb(190, 19, 19);
+    display: flex;
+}
+.lastpro {
+    background-color: rgb(190, 19, 19);
+    display: flex;
+}
+.up {
+    background-color: rgb(190, 19, 19);
+    display: flex;
+}
