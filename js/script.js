@@ -41,3 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".manifest-content");
+
+  items.forEach(item => {
+    const content = item.querySelector(".content");
+    const icon = item.querySelector(".icon");
+
+    item.addEventListener("click", () => {
+      const isActive = item.classList.contains("active");
+
+      if (!isActive) {
+        item.classList.add("active");
+        content.style.maxHeight = content.scrollHeight + "px"; // ouverture fluide
+        icon.textContent = "×";
+      } else {
+        item.classList.remove("active");
+        content.style.maxHeight = null; // fermeture fluide
+        icon.textContent = "+";
+      }
+    });
+  });
+});
