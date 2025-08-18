@@ -285,7 +285,7 @@ p {
 .imagescont {
     width: 50%;
     height: 100%; /* Prend toute la hauteur */
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     padding-right: 15px;
     overflow-y: auto; /* Permet le défilement vertical */
 }
@@ -301,7 +301,7 @@ p {
 .textecont {
     width: 50%;
     height: 100%; /* Prend toute la hauteur */
-    background-color: rgb(4, 255, 0);
+    background-color: rgb(255, 255, 255);
     padding-left: 15px;
     padding-right: 15px;
     overflow-y: auto; /* Permet le défilement vertical */
@@ -337,23 +337,29 @@ p {
 }
 
 .backdate {
-    background-color: seagreen;
+    background-color: rgb(255, 255, 255);
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .back {
-    background-color: blueviolet;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-no-style {
+    text-decoration: none; /* pas de souligné */
+    color: inherit; /* prend la couleur du contenu */
+    -webkit-tap-highlight-color: transparent; /* pas de flash bleu sur mobile */
 }
 
 .date {
-    background-color: chartreuse;
+    background-color: rgb(255, 255, 255);
     align-content: right;
 }
 
 .filler {
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     width: 100%;
     height: 30px;
 }
