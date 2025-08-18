@@ -312,7 +312,7 @@ p {
     font-size: 1.2rem;
     font-weight: 400; /* Utilisation du poids normal */
     letter-spacing: 0rem;
-    padding-right: 20%;
+    padding-right: 30%;
     color: black;
 }
 
@@ -384,26 +384,34 @@ p {
     display: flex;
     gap: 0px 15px;
     align-items: center;
+    cursor: pointer; /* Montre que c'est cliquable */
+    transition: transform 0.2s ease; /* Animation au hover */
 }
 .lastpro {
     background-color: rgb(255, 255, 255);
     display: flex;
     gap: 0px 15px;
     align-items: center;
+    cursor: pointer; /* Montre que c'est cliquable */
+    transition: transform 0.2s ease; /* Animation au hover */
 }
 .up {
     background-color: rgb(255, 255, 255);
     display: flex;
-}
-
-.up {
-    /* ...existing code... */
     cursor: pointer; /* Montre que c'est cliquable */
     transition: transform 0.2s ease; /* Animation au hover */
 }
 
 .up:hover {
     transform: translateY(-4px); /* Léger mouvement vers le haut au hover */
+}
+.lastpro:hover {
+    transform: translateX(-4px); /* Léger mouvement vers le haut au hover */
+    text-decoration: underline;
+}
+.nextpro:hover {
+    transform: translateX(4px); /* Léger mouvement vers le haut au hover */
+    text-decoration: underline;
 }
 .manifest-container {
     max-width: 900px;
