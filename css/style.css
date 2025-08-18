@@ -72,7 +72,7 @@ nav li::before {
         255,
         255
     ); /* doit correspondre au background du header */
-    z-index: 1;
+    z-index: 10;
     pointer-events: none; /* ne bloque pas les clics */
 }
 
@@ -83,7 +83,7 @@ nav li::after {
     top: 6px; /* espace du trou en haut */
     bottom: 6px; /* espace du trou en bas */
     width: 3px;
-    z-index: 2;
+    z-index: 20;
     background-color: black;
 }
 
@@ -239,30 +239,34 @@ p {
     letter-spacing: -0.1rem;
     text-align: center; /* Centrer le titre */
     outline: black 3px solid; /* Bordure noire */
+    z-index: 5;
 }
 
 .container {
     background-color: seagreen;
     position: fixed;
-
     width: 100%;
     height: auto;
     overflow: hidden;
     top: 100px;
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: start;
     justify-content: center;
 }
 
-.images {
+.imagescont {
     width: 50%;
-    height: 100px;
+    height: auto;
     background-color: rgb(255, 0, 0);
-    justify-content: left;
     padding-right: 15px;
 }
-.texte {
+
+.image {
+    width: 100%;
+    height: auto;
+}
+.textecont {
     width: 50%;
     height: 100%;
     background-color: rgb(4, 255, 0);
