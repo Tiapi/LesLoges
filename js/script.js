@@ -22,3 +22,22 @@ window.addEventListener(
     },
     { passive: false }
 );
+
+// Attendre que le DOM soit chargé
+document.addEventListener("DOMContentLoaded", () => {
+    // Trouver le bouton "up"
+    const upButton = document.querySelector(".up");
+
+    if (!upButton) return; // sécurité si bouton absent
+
+    // Au clic, scroll en haut de .textecont
+    upButton.addEventListener("click", () => {
+        const texteCont = document.querySelector(".textecont");
+        if (texteCont) {
+            texteCont.scrollTo({
+                top: 0,
+                behavior: "smooth",
+            });
+        }
+    });
+});
