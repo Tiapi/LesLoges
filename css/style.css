@@ -22,12 +22,23 @@ body {
     margin: 0; /* Ajout pour éviter les marges par défaut */
 }
 
+footer {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 0;
+    display: flex;
+    justify-content: row;
+    width: 100%;
+    justify-content: center;
+    border-top: black 3px solid;
+}
+
 header {
     background-color: rgb(255, 255, 255);
     padding: 5px 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
+    text-align: center;
     border-top: black 3px solid;
     border-bottom: black 3px solid;
 }
