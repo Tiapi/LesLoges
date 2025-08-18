@@ -23,8 +23,19 @@ body {
 }
 
 header {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 5px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-top: black 3px solid;
+    border-bottom: black 3px solid;
+}
+
+header2 {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 0;
+    position: fixed;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -227,4 +238,16 @@ p {
     font-size: 1.2rem;
     font-weight: 400; /* Utilisation du poids normal */
     letter-spacing: 0rem;
+}
+
+.title {
+    font-family: "vietnam", sans-serif;
+    position: fixed;
+    top: 50px;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700; /* Utilisation du poids medium */
+    letter-spacing: -0.1rem;
+    text-align: center; /* Centrer le titre */
+    outline: black 3px solid; /* Bordure noire */
 }
