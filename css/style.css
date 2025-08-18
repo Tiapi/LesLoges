@@ -291,3 +291,15 @@ p {
     color: black;
     line-height: 4rem;
 }
+
+.datepro {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-family: "vietnam", sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700; /* Utilisation du poids medium */
+    letter-spacing: -0.1rem;
+    color: black;
+    line-height: 4rem;
+}
