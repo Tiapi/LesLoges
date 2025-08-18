@@ -242,36 +242,68 @@ p {
     z-index: 5;
 }
 
+/* Style pour les conteneurs défilables */
+.imagescont {
+    width: 50%;
+    height: 100%;
+    padding-right: 15px;
+    overflow-y: scroll; /* Change auto to scroll */
+    -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
+    scrollbar-width: none; /* Masque scrollbar Firefox */
+}
+
+.textecont {
+    width: 50%;
+    height: 100%;
+    padding-left: 15px;
+    overflow-y: scroll; /* Change auto to scroll */
+    -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
+    scrollbar-width: none; /* Masque scrollbar Firefox */
+}
+
+/* Masque les scrollbars pour Chrome, Safari et Opera */
+.imagescont::-webkit-scrollbar,
+.textecont::-webkit-scrollbar {
+    display: none;
+}
+
+/* Ajustements pour le container principal */
 .container {
-    background-color: seagreen;
+    background-color: white; /* Change la couleur de fond */
     position: fixed;
     width: 100%;
-    height: auto;
-    overflow: hidden;
+    height: calc(100vh - 100px);
     top: 100px;
     display: flex;
     flex-direction: row;
     align-items: start;
     justify-content: center;
+    overflow: hidden; /* Empêche le défilement du container lui-même */
 }
 
 .imagescont {
     width: 50%;
-    height: auto;
+    height: 100%; /* Prend toute la hauteur */
     background-color: rgb(255, 0, 0);
     padding-right: 15px;
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
 .image {
     width: 100%;
     height: auto;
+    display: block; /* Enlève l'espace par défaut sous les images */
+    width: 100%;
+    margin: 0; /* Enlève les marges */
+    padding: 0; /* Enlève le padding */
 }
 .textecont {
     width: 50%;
-    height: 100%;
+    height: 100%; /* Prend toute la hauteur */
     background-color: rgb(4, 255, 0);
-    justify-content: left;
     padding-left: 15px;
+    padding-right: 15px;
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
 .textpro {
@@ -293,7 +325,6 @@ p {
 }
 
 .datepro {
-    position: absolute;
     top: 0;
     right: 15px;
     font-family: "vietnam", sans-serif;
@@ -302,4 +333,26 @@ p {
     letter-spacing: -0.1rem;
     color: black;
     line-height: 4rem;
+}
+
+.backdate {
+    background-color: seagreen;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.back {
+    background-color: blueviolet;
+}
+
+.date {
+    background-color: chartreuse;
+    align-content: right;
+}
+
+.filler {
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    height: 30px;
 }
