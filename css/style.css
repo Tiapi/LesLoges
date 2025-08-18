@@ -370,18 +370,18 @@ p {
 }
 
 .nextpro {
-    background-color: rgb(190, 19, 19);
+    background-color: rgb(255, 255, 255);
     display: flex;
     gap: 0px 15px;
     align-items: center;
 }
 .lastpro {
-    background-color: rgb(190, 19, 19);
+    background-color: rgb(255, 255, 255);
     display: flex;
     gap: 0px 15px;
     align-items: center;
 }
 .up {
-    background-color: rgb(190, 19, 19);
+    background-color: rgb(255, 255, 255);
     display: flex;
 }
