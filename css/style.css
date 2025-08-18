@@ -488,3 +488,58 @@ p {
 .manifest-content.active .icon {
     transform: rotate(45deg); /* transforme + en × */
 }
+
+
+.projects h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.projects-table td {
+    padding: 10px;
+    text-align: center;
+    position: relative; /* pour les pseudo-éléments */
+}
+
+.projects-table .project-name a {
+    font-weight: bold;
+    color: inherit; /* prend la couleur du parent */
+    text-decoration: underline; /* souligné par défaut */
+}
+
+.projects-table .project-name a:hover {
+    text-decoration: none; /*pas souligné au hover */
+}
+
+/* === Séparateurs verticaux entre colonnes === */
+.projects-table td:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 10%;       /* ne touche pas la bordure du tableau */
+    bottom: 10%;
+    right: 0;
+    width: 2px;
+    background: black;
+}
+
+.projects-table tr {
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.projects-table .project-name {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.projects-table .project-name:hover {
+    text-decoration: none;
+}
+
