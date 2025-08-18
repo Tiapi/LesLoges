@@ -347,6 +347,16 @@ p {
     background-color: rgb(255, 255, 255);
 }
 
+.back {
+    /* ...existing code... */
+    cursor: pointer; /* Montre que c'est cliquable */
+    transition: transform 0.2s ease; /* Animation au hover */
+}
+
+.back:hover {
+    transform: translateX(-4px); /* Léger mouvement vers le haut au hover */
+}
+
 .btn-no-style {
     text-decoration: none; /* pas de souligné */
     color: inherit; /* prend la couleur du contenu */
@@ -384,4 +394,14 @@ p {
 .up {
     background-color: rgb(255, 255, 255);
     display: flex;
+}
+
+.up {
+    /* ...existing code... */
+    cursor: pointer; /* Montre que c'est cliquable */
+    transition: transform 0.2s ease; /* Animation au hover */
+}
+
+.up:hover {
+    transform: translateY(-4px); /* Léger mouvement vers le haut au hover */
 }
