@@ -43,6 +43,9 @@ footer {
 header {
     background-color: rgb(255, 255, 255);
     padding: 5px 0;
+    overflow: visible;
+    overscroll-behavior: none;
+    -webkit-overflow-scrolling: auto;
     display: flex;
     width: 100%;
     justify-content: space-between;
