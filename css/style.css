@@ -248,8 +248,14 @@ section {
 
 h1 {
     font-family: "vietnam", sans-serif;
-    font-size: 3rem;
-    font-weight: 700; /* Utilisation du poids normal */
+    font-size: 5rem;
+    font-weight: 700; /* Utilisation du poids medium */
+    letter-spacing: -0.3rem;
+    color: black;
+    line-height: 4rem;
+}
+
+h2 {
     letter-spacing: -0.18rem;
 }
 
@@ -351,7 +357,7 @@ p {
     font-family: "vietnam", sans-serif;
     font-size: 5rem;
     font-weight: 700; /* Utilisation du poids medium */
-    letter-spacing: -0.1rem;
+    letter-spacing: -0.3rem;
     color: black;
     line-height: 4rem;
 }
