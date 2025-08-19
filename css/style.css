@@ -21,10 +21,16 @@ body {
     color: black;
     margin: 0; /* Ajout pour éviter les marges par défaut */
 }
+.site {
+    min-height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+}
 
 footer {
     background-color: rgb(255, 255, 255);
     padding: 5px 0;
+    margin-top: auto;
     height: 50px;
     display: flex;
     justify-content: row;
@@ -489,7 +495,6 @@ p {
     transform: rotate(45deg); /* transforme + en × */
 }
 
-
 .projects h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -522,7 +527,7 @@ p {
 .projects-table td:not(:last-child)::after {
     content: "";
     position: absolute;
-    top: 10%;       /* ne touche pas la bordure du tableau */
+    top: 10%; /* ne touche pas la bordure du tableau */
     bottom: 10%;
     right: 0;
     width: 2px;
@@ -542,4 +547,3 @@ p {
 .projects-table .project-name:hover {
     text-decoration: none;
 }
-
