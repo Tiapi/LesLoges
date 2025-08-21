@@ -501,7 +501,7 @@ p {
 
 .content {
     max-height: 0;
-    padding-right: 30%;
+    padding-right: 40%;
     overflow: hidden;
     transition: max-height 0.6s ease; /* durée plus longue */
     margin-top: 10px;
@@ -569,8 +569,8 @@ p {
     top: 10%; /* ne touche pas la bordure du tableau */
     bottom: 10%;
     right: 0;
-    width: 2px;
-    background: black;
+    width: 3px;
+    background: rgb(0, 0, 0);
 }
 
 .projects-table tr {
