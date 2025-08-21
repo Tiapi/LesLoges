@@ -569,7 +569,7 @@ p {
     top: 10%; /* ne touche pas la bordure du tableau */
     bottom: 10%;
     right: 0;
-    width: 3px;
+    width: 2.8px;
     background: rgb(0, 0, 0);
 }
 
