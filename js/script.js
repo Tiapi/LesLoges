@@ -54,11 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!isActive) {
                 item.classList.add("active");
                 content.style.maxHeight = content.scrollHeight + "px"; // ouverture fluide
-                icon.textContent = "×";
             } else {
                 item.classList.remove("active");
                 content.style.maxHeight = null; // fermeture fluide
-                icon.textContent = "+";
             }
         });
     });

@@ -19,6 +19,15 @@ body {
     overscroll-behavior: none; /* bloque le rebond */
     -webkit-overflow-scrolling: auto; /* enlève l’inertie spécifique à Safari/iOS/macOS */
 }
+body {
+    overflow: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, Edge */
+body::-webkit-scrollbar {
+    display: none;
+}
 
 body {
     font-family: "vietnam", sans-serif;
@@ -36,6 +45,7 @@ body {
 footer {
     background-color: rgb(255, 255, 255);
     padding: 5px 0;
+    z-index: 1000;
     margin-top: auto;
     height: 50px;
     display: flex;
@@ -44,6 +54,11 @@ footer {
     justify-content: center;
     align-items: center;
     border-top: black 3px solid;
+}
+
+.cachefooter {
+    height: 50px;
+    background-color: #ffffff;
 }
 
 header {
@@ -451,29 +466,42 @@ p {
     text-decoration: underline;
 }
 .manifest-container {
-    max-width: 900px;
-    margin: 0 auto;
-    background: #fff; /* fond blanc */
-    padding: 20px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    background: #e32121; /* fond blanc */
     font-family: Arial, sans-serif;
     color: #000;
 }
 
 .manifest-content {
     position: relative;
-    border-bottom: 1px solid #ccc;
-    padding: 20px 40px 20px 0;
+    background: #55e321; /* fond blanc */
+
+    border-bottom: 3px solid #000000;
+    padding-top: 20px;
     cursor: pointer;
 }
 
+.maintitle {
+    background-color: #e321a9;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
 .content-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 700; /* Utilisation du poids medium */
+    letter-spacing: -0.2rem;
+    color: black;
+    line-height: 3.1rem;
+    margin-bottom: -6px;
 }
 
 .content {
     max-height: 0;
+    padding-right: 30%;
     overflow: hidden;
     transition: max-height 0.6s ease; /* durée plus longue */
     margin-top: 10px;
@@ -481,7 +509,6 @@ p {
 
 .content p {
     margin: 0;
-    padding: 10px 0;
 }
 
 .manifest-content.active .content {
@@ -492,17 +519,14 @@ p {
 .icon {
     position: absolute;
     right: 0;
-    top: 20px;
-    width: 36px;
-    height: 36px;
-    background: #000;
-    color: #fff;
-    border-radius: 50%;
+    top: 18px;
+    width: 50px;
+    height: 50px;
+    background: #aeff00;
+    color: #000000;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 20px;
     transition: transform 0.3s ease;
 }
 
