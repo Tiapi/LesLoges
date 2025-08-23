@@ -14,6 +14,10 @@
     font-style: normal;
 }
 
+html {
+    font-size: 16px;
+}
+
 html,
 body {
     overscroll-behavior: none; /* bloque le rebond */
@@ -361,20 +365,23 @@ p {
 
 .textpro {
     font-family: "vietnam", sans-serif;
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
     font-weight: 400; /* Utilisation du poids normal */
-    letter-spacing: 0rem;
-    padding-right: 30%;
+    letter-spacing: clamp(-0.1rem, 0rem, 0rem);
+    max-width: 400px;
+    margin-right: 6vw;
     color: black;
+    background-color: #ffffff;
 }
 
 .titlepro {
     font-family: "vietnam", sans-serif;
-    font-size: 5rem;
+    font-size: clamp(3.7rem, 7vw, 5rem);
     font-weight: 700; /* Utilisation du poids medium */
     letter-spacing: -0.3rem;
     color: black;
-    line-height: 4rem;
+    line-height: clamp(3rem, 5.8vw, 4rem);
+    background-color: #ffffff;
 }
 
 .datepro {
@@ -429,29 +436,47 @@ p {
 .containernav {
     display: flex;
     justify-content: space-between;
+    background-color: #ffffff;
+    height: auto;
 }
 
 .nextpro {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     display: flex;
     gap: 0px 15px;
     align-items: center;
     cursor: pointer; /* Montre que c'est cliquable */
     transition: transform 0.2s ease; /* Animation au hover */
+    width: auto;
 }
+
+.nextpro p {
+    color: #000000;
+    text-align: right;
+    line-height: 1rem;
+}
+.lastpro p {
+    color: #000000;
+    line-height: 1rem;
+}
+
 .lastpro {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
+
     display: flex;
     gap: 0px 15px;
     align-items: center;
     cursor: pointer; /* Montre que c'est cliquable */
     transition: transform 0.2s ease; /* Animation au hover */
+    width: auto;
 }
 .up {
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    justify-content: center;
     display: flex;
     cursor: pointer; /* Montre que c'est cliquable */
     transition: transform 0.2s ease; /* Animation au hover */
+    width: auto;
 }
 
 .up:hover {
