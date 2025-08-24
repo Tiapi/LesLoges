@@ -611,3 +611,175 @@ p {
 .projects-table .project-name:hover {
     text-decoration: none;
 }
+
+/* === MEDIA QUERIES RESPONSIVE === */
+
+/* Tablettes (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .container {
+        height: calc(100vh - 80px);
+        top: 80px;
+    }
+    .title {
+        font-size: 1.5rem;
+        top: 40px;
+    }
+    .maintitle {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    .manifest-container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .content-title {
+        font-size: 2.2rem;
+        line-height: 2.2rem;
+    }
+    h1 {
+        font-size: 3rem;
+        line-height: 2.5rem;
+    }
+    .titlepro {
+        font-size: clamp(2.2rem, 5vw, 3rem);
+        line-height: clamp(2rem, 4vw, 2.5rem);
+    }
+    .datepro {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .textpro {
+        font-size: 1rem;
+        max-width: 300px;
+        margin-right: 2vw;
+    }
+    .imagescont,
+    .textecont {
+        width: 50%;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .icon {
+        width: 40px;
+        height: 40px;
+        top: 10px;
+    }
+}
+
+/* Mobiles (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        height: 44px;
+        min-height: 44px;
+        padding: 0;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+    }
+    nav {
+        position: relative;
+        width: 100%;
+        height: 44px;
+        align-items: center;
+    }
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 44px;
+        height: 44px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 2001;
+        position: absolute;
+        left: 8px;
+        top: 0;
+    }
+    .burger span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        margin: 4px 0;
+        background: black;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        width: 100vw;
+        background: white;
+        border-bottom: 2px solid black;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        display: none;
+        z-index: 2000;
+    }
+    nav ul.open {
+        display: flex;
+    }
+    nav li {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #eee;
+        padding: 12px 0;
+        font-size: 1.1rem;
+    }
+    nav li:last-child {
+        border-bottom: none;
+    }
+    .burger.open span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .burger.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .burger.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+/* Petits mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 1rem;
+        outline-width: 1.5px;
+    }
+    .maintitle {
+        font-size: 1.1rem;
+        margin: 0.5rem 0.2rem 1rem 0.2rem;
+    }
+    h1,
+    .titlepro {
+        font-size: 1.2rem;
+        line-height: 1.1rem;
+    }
+    .datepro {
+        font-size: 0.9rem;
+        line-height: 0.9rem;
+    }
+    .textpro {
+        font-size: 0.85rem;
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+        top: 2px;
+    }
+    .content-title {
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .manifest-container {
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+    }
+    .projects-table td {
+        font-size: 0.8rem;
+        padding: 2px;
+    }
+}

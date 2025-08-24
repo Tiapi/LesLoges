@@ -60,4 +60,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+    const burger = document.querySelector(".burger");
+    const navUl = document.querySelector("nav ul");
+    if (burger && navUl) {
+        burger.addEventListener("click", () => {
+            const isOpen = navUl.classList.toggle("open");
+            burger.classList.toggle("open", isOpen);
+            burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+        // Optionally close menu when clicking a link
+        navUl.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navUl.classList.remove("open");
+                burger.classList.remove("open");
+                burger.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
 });
