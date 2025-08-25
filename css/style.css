@@ -44,6 +44,9 @@ body {
     min-height: calc(100vh - 52px);
     display: flex;
     flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
 }
 
 footer {
@@ -189,7 +192,17 @@ html {
     cursor: pointer;
     display: flex; /* Ajout */
     overflow: hidden;
+    /* animation: heightFix 0s 1s forwards; */
 }
+
+/* @keyframes heightFix {
+    from {
+        height: 100dvh;
+    }
+    to {
+        height: 100vh;
+    }
+} */
 
 /* Container pour les logos */
 .hero__logos {
@@ -276,7 +289,6 @@ html {
 
 /* Contenu principal */
 #main-content {
-    min-height: 100vh;
     background-color: #ffffff;
     margin-top: 0; /* Important */
 }
@@ -323,18 +335,11 @@ p {
 }
 
 /* Style pour les conteneurs défilables */
-.imagescont {
-    width: 50%;
-    height: 100%;
-    padding-right: 15px;
-    overflow-y: scroll; /* Change auto to scroll */
-    -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
-    scrollbar-width: none; /* Masque scrollbar Firefox */
-}
+
 .imagesabout {
     width: 50%;
     height: 100%;
-    padding-left: 15px;
+    padding-left: 0px;
     overflow-y: scroll; /* Change auto to scroll */
     -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
     scrollbar-width: none; /* Masque scrollbar Firefox */
@@ -385,7 +390,7 @@ p {
     width: 50%;
     height: 100%; /* Prend toute la hauteur */
     background-color: rgb(255, 255, 255);
-    padding-right: 15px;
+    padding-right: 5px;
     overflow-y: auto; /* Permet le défilement vertical */
 }
 
@@ -816,7 +821,7 @@ p {
         position: absolute;
         top: 44px;
         left: 0;
-        width: 100vw;
+        width: 100dvw;
         background: white;
         border-bottom: 3px solid black;
         display: none;
@@ -824,7 +829,7 @@ p {
     }
     nav ul.open {
         display: flex;
-        width: 100vw;
+        width: 100%;
         overflow: hidden;
     }
 
