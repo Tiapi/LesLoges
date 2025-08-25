@@ -501,23 +501,6 @@ p {
     text-decoration: underline;
 }
 
-@media (max-width: 800px) {
-    .container {
-        flex-direction: column; /* les éléments passent l'un sous l'autre */
-        align-items: end;
-    }
-    .imagescont {
-        width: 100%;
-        padding-right: 0px;
-    }
-    .textecont {
-        width: 100%;
-    }
-    .up {
-        display: none; /* cet élément disparaît */
-    }
-}
-
 .manifest-container {
     margin-left: 3rem;
     margin-right: 3rem;
@@ -643,7 +626,7 @@ p {
 /* === MEDIA QUERIES RESPONSIVE === */
 
 /* Tablettes (max-width: 1024px) */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
     .container {
         height: calc(100vh - 80px);
         top: 80px;
@@ -694,12 +677,12 @@ p {
         height: 40px;
         top: 10px;
     }
-}
+} */
 
 /* Mobiles (max-width: 768px) */
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     header {
-        height: 44px;
+        height: 50px;
         min-height: 44px;
         padding: 0;
         border-top-width: 2px;
@@ -742,8 +725,8 @@ p {
         left: 0;
         width: 100vw;
         background: white;
-        border-bottom: 2px solid black;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        border-bottom: 3px solid black;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
         display: none;
         z-index: 2000;
     }
@@ -753,7 +736,7 @@ p {
     nav li {
         width: 100%;
         border: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 3px solid #000000;
         padding: 12px 0;
         font-size: 1.1rem;
     }
@@ -809,5 +792,22 @@ p {
     .projects-table td {
         font-size: 0.8rem;
         padding: 2px;
+    }
+}
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        align-items: end;
+    }
+    .imagescont {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .textecont {
+        width: 100%;
+    }
+    .up {
+        display: none;
     }
 }
