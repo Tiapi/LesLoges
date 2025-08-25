@@ -196,8 +196,8 @@ html {
     padding-left: 1.2%; /* un peu plus large à gauche */
     padding-bottom: 0.95%; /* un peu moins en bas */
     padding-top: 7vh; /* si besoin, même que le bas */
-    padding-right: 7vh;
-    width: 72%; /* Ajout pour voir le container même sans images */
+    padding-right: 6vh;
+    width: 80%; /* Ajout pour voir le container même sans images */
     height: 65%; /* Ajout pour voir le container même sans images */
 }
 
@@ -322,6 +322,20 @@ p {
     -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
     scrollbar-width: none; /* Masque scrollbar Firefox */
 }
+.imagesabout {
+    width: 50%;
+    height: 100%;
+    padding-left: 15px;
+    overflow-y: scroll; /* Change auto to scroll */
+    -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
+    scrollbar-width: none; /* Masque scrollbar Firefox */
+}
+
+@media (max-width: 800px) {
+    .imagesabout {
+        display: none;
+    }
+}
 
 .imagescont2 {
     display: flex;
@@ -346,10 +360,10 @@ p {
 
 /* Ajustements pour le container principal */
 .container {
-    background-color: rgb(255, 0, 0); /* Change la couleur de fond */
+    background-color: rgb(255, 255, 255); /* Change la couleur de fond */
     position: fixed;
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100dvh - 100px);
     top: 100px;
     display: flex;
     flex-direction: row;
