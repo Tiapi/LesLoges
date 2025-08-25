@@ -76,7 +76,7 @@ header {
     justify-content: space-between;
     text-align: center;
     border-top: black 3px solid;
-    border-bottom: black 3px solid;
+    border-bottom: rgb(0, 0, 0) 3px solid;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -305,6 +305,14 @@ p {
     width: 50%;
     height: 100%;
     padding-right: 15px;
+    overflow-y: scroll; /* Change auto to scroll */
+    -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
+    scrollbar-width: none; /* Masque scrollbar Firefox */
+}
+
+.imagescont {
+    width: 50%;
+    height: 100%;
     overflow-y: scroll; /* Change auto to scroll */
     -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
     scrollbar-width: none; /* Masque scrollbar Firefox */
@@ -715,7 +723,6 @@ p {
         height: 3px;
         margin: 4px 0;
         background: black;
-        border-radius: 2px;
         transition: 0.3s;
     }
     nav ul {
@@ -726,7 +733,6 @@ p {
         width: 100vw;
         background: white;
         border-bottom: 3px solid black;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.04);
         display: none;
         z-index: 2000;
     }
@@ -797,7 +803,7 @@ p {
 
 @media (max-width: 800px) {
     .container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: end;
     }
     .imagescont {
@@ -808,6 +814,21 @@ p {
         width: 100%;
     }
     .up {
+        display: none;
+    }
+    .imagescont {
+        display: none;
+    }
+    .title {
+        top: 51px;
+    }
+}
+
+@media (min-width: 801px) {
+    .burger {
+        display: none;
+    }
+    .imagescont2 {
         display: none;
     }
 }
