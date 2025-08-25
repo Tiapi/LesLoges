@@ -310,12 +310,10 @@ p {
     scrollbar-width: none; /* Masque scrollbar Firefox */
 }
 
-.imagescont {
-    width: 50%;
-    height: 100%;
-    overflow-y: scroll; /* Change auto to scroll */
-    -ms-overflow-style: none; /* Masque scrollbar IE et Edge */
-    scrollbar-width: none; /* Masque scrollbar Firefox */
+.imagescont2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .textecont {
@@ -761,7 +759,7 @@ p {
 }
 
 /* Petits mobiles (max-width: 480px) */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
     .title {
         font-size: 1rem;
         outline-width: 1.5px;
@@ -799,7 +797,7 @@ p {
         font-size: 0.8rem;
         padding: 2px;
     }
-}
+} */
 
 @media (max-width: 800px) {
     .container {
