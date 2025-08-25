@@ -174,7 +174,7 @@ html {
 
 /* Style du héros */
 .hero {
-    height: 100vh;
+    height: 100dvh;
     background-color: rgb(255, 255, 255);
     position: relative;
     cursor: pointer;
@@ -199,6 +199,18 @@ html {
     padding-right: 7vh;
     width: 72%; /* Ajout pour voir le container même sans images */
     height: 65%; /* Ajout pour voir le container même sans images */
+}
+
+@media (max-width: 800px) {
+    .hero__logos {
+        gap: 1.2%;
+        padding-left: 1.2%; /* un peu plus large à gauche */
+        padding-bottom: 0.95%; /* un peu moins en bas */
+        padding-top: 7vh; /* si besoin, même que le bas */
+        padding-right: 4vh;
+        width: 90%; /* Ajout pour voir le container même sans images */
+        height: 65%; /* Ajout pour voir le container même sans images */
+    }
 }
 
 .Les,
