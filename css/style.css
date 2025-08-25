@@ -134,7 +134,7 @@ nav li::after {
     bottom: 6px; /* espace du trou en bas */
     width: 3px;
     z-index: 20;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
 }
 
 nav li + li {
@@ -154,6 +154,7 @@ nav a {
     text-decoration: none;
     color: black;
     display: block;
+    z-index: 11;
 }
 
 nav li:hover {
@@ -326,7 +327,7 @@ p {
 
 /* Ajustements pour le container principal */
 .container {
-    background-color: white; /* Change la couleur de fond */
+    background-color: rgb(255, 0, 0); /* Change la couleur de fond */
     position: fixed;
     width: 100%;
     height: calc(100vh - 100px);
@@ -365,7 +366,7 @@ p {
 
 .textpro {
     font-family: "vietnam", sans-serif;
-    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-size: clamp(0.8rem, 2vw, 1.2rem);
     font-weight: 400; /* Utilisation du poids normal */
     letter-spacing: clamp(-0.1rem, 0rem, 0rem);
     max-width: 400px;
@@ -382,6 +383,15 @@ p {
     color: black;
     line-height: clamp(3rem, 5.8vw, 4rem);
     background-color: #ffffff;
+}
+
+@media (min-width: 800px) {
+    .titlepro {
+        font-size: clamp(3.7rem, 10%, 5rem);
+    }
+    .textepro {
+        font-size: clamp(0.9rem, 2vw, 1.2rem);
+    }
 }
 
 .datepro {
@@ -490,6 +500,24 @@ p {
     transform: translateX(4px); /* Léger mouvement vers le haut au hover */
     text-decoration: underline;
 }
+
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column; /* les éléments passent l'un sous l'autre */
+        align-items: end;
+    }
+    .imagescont {
+        width: 100%;
+        padding-right: 0px;
+    }
+    .textecont {
+        width: 100%;
+    }
+    .up {
+        display: none; /* cet élément disparaît */
+    }
+}
+
 .manifest-container {
     margin-left: 3rem;
     margin-right: 3rem;
