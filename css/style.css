@@ -41,7 +41,7 @@ body {
     margin: 0; /* Ajout pour éviter les marges par défaut */
 }
 .site {
-    min-height: calc(100vh - 50px);
+    min-height: calc(100vh - 52px);
     display: flex;
     flex-direction: column;
 }
@@ -75,7 +75,7 @@ header {
     width: 100%;
     justify-content: space-between;
     text-align: center;
-    border-top: black 3px solid;
+    border-top: rgb(0, 0, 0) 3px solid;
     border-bottom: rgb(0, 0, 0) 3px solid;
     position: sticky;
     top: 0;
@@ -273,6 +273,7 @@ h1 {
     letter-spacing: -0.3rem;
     color: black;
     line-height: 4rem;
+    height: fit-content;
 }
 
 h2 {
@@ -392,9 +393,6 @@ p {
 }
 
 @media (min-width: 800px) {
-    .titlepro {
-        font-size: clamp(3.7rem, 10%, 5rem);
-    }
     .textepro {
         font-size: clamp(0.9rem, 2vw, 1.2rem);
     }
@@ -508,9 +506,9 @@ p {
 }
 
 .manifest-container {
-    margin-left: 3rem;
+    margin-left: 0.2rem;
     margin-right: 3rem;
-    background: #e32121; /* fond blanc */
+    background: #ffffff; /* fond blanc */
     font-family: Arial, sans-serif;
     color: #000;
 }
@@ -526,10 +524,11 @@ p {
 
 .maintitle {
     background-color: #e321a9;
-    margin-left: 3rem;
+    height: auto;
     margin-right: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    margin-left: 0.5vw;
 }
 
 .content-title {
@@ -684,6 +683,18 @@ p {
         top: 10px;
     }
 } */
+@media (max-width: 800px) {
+    .maintitle h1 {
+        font-size: 3.5rem;
+        letter-spacing: -0.25rem;
+    }
+    .maintitle {
+        margin-right: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        margin-left: 0.2rem;
+    }
+}
 
 /* Mobiles (max-width: 768px) */
 @media (max-width: 800px) {
@@ -691,8 +702,8 @@ p {
         height: 50px;
         min-height: 44px;
         padding: 0;
-        border-top-width: 2px;
-        border-bottom-width: 2px;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
     }
     nav {
         position: relative;
@@ -799,6 +810,16 @@ p {
     }
 } */
 
+@media (max-width: 480px) {
+    .maintitle h1 {
+        font-size: 2rem;
+        letter-spacing: -0.13rem;
+    }
+    .maintitle {
+        margin: 1rem 0.2rem 0.5rem 0.2rem;
+    }
+}
+
 @media (max-width: 800px) {
     .container {
         flex-direction: column-reverse;
@@ -818,7 +839,7 @@ p {
         display: none;
     }
     .title {
-        top: 51px;
+        top: 50px;
     }
 }
 
