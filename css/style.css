@@ -137,6 +137,15 @@ nav li::after {
     background-color: rgb(0, 0, 0);
 }
 
+@media (max-width: 800px) {
+    nav li::after {
+        display: none;
+    }
+    nav li::before {
+        display: none;
+    }
+}
+
 nav li + li {
     border-left: none; /* éviter double ligne entre les boutons */
 }
@@ -630,7 +639,7 @@ p {
         line-height: 1.6rem;
     }
     .icon {
-        top: 20px;
+        top: 18px;
         width: 25px;
         height: 25px;
     }
@@ -796,7 +805,7 @@ p {
     }
     .burger span {
         display: block;
-        width: 28px;
+        width: 35px;
         height: 3px;
         margin: 4px 0;
         background: black;
@@ -815,7 +824,10 @@ p {
     }
     nav ul.open {
         display: flex;
+        width: 100vw;
+        overflow: hidden;
     }
+
     nav li {
         width: 100%;
         border: none;
@@ -827,13 +839,13 @@ p {
         border-bottom: none;
     }
     .burger.open span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+        transform: rotate(45deg) translate(7.5px, 7.5px);
     }
     .burger.open span:nth-child(2) {
-        opacity: 0;
+        transform: scaleX(0);
     }
     .burger.open span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
+        transform: rotate(-45deg) translate(8px, -8px);
     }
 }
 
