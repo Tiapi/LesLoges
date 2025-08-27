@@ -547,7 +547,7 @@ p {
 }
 
 .manifest-container {
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
     margin-right: 3rem;
     background: #ffffff; /* fond blanc */
     font-family: Arial, sans-serif;
@@ -626,7 +626,7 @@ p {
         height: 33px;
     }
     .manifest-container {
-        margin-right: 0.2rem;
+        margin-right: 0.5rem;
     }
     .content {
         font-size: clamp(0.8rem, 2vw, 1.2rem);
