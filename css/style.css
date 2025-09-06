@@ -332,6 +332,7 @@ p {
     text-align: center; /* Centrer le titre */
     outline: black 3px solid; /* Bordure noire */
     z-index: 5;
+    background-color: white;
 }
 
 /* Style pour les conteneurs défilables */
@@ -355,6 +356,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    padding-bottom: 15px;
 }
 
 .textecont {
