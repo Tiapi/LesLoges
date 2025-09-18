@@ -416,5 +416,8 @@ const inverseCursor = new InverseCursor({
     size: 40, // Taille du curseur en pixels
 });
 
+// Affiche le curseur dès le chargement de la page
+inverseCursor.show();
+
 // Rendre accessible globalement
 window.inverseCursor = inverseCursor;
