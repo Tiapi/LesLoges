@@ -77,6 +77,178 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Charge la liste des projets depuis /data/projects.json
+    fetch('/data/projects.json')
+        .then(res => {
+            if (!res.ok) throw new Error('Projet JSON inaccessible');
+            return res.json();
+        })
+        .then(data => {
+            window.projectList = data;
+
+            // Générer la table des projets si elle existe
+            const projectsTable = document.querySelector(".projects-table");
+            if (projectsTable) {
+                projectsTable.innerHTML = `
+                    <colgroup>
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                        <col style="width: 25%" />
+                    </colgroup>
+                    <tr>
+                        <td>Date / Year</td>
+                        <td>Project place</td>
+                        <td colspan="2" class="project-name">Project name</td>
+                    </tr>
+                `;
+                window.projectList.forEach((proj, idx) => {
+                    projectsTable.innerHTML += `
+                        <tr>
+                            <td>${proj.year}</td>
+                            <td>${proj.place}</td>
+                            <td colspan="2" class="project-name">
+                                <a href="pages/projet_template.html?id=${proj.id}">${proj.name}</a>
+                            </td>
+                        </tr>
+                    `;
+                });
+            }
+
+            // Si on est sur la page projet_template.html, affiche le bon projet selon l'id
+            const path = window.location.pathname;
+            if (path.includes("/pages/projet_template.html")) {
+                const params = new URLSearchParams(window.location.search);
+                const projId = params.get("id");
+                const idx = window.projectList.findIndex((p) => p.id === projId);
+                const proj = window.projectList[idx];
+
+                if (proj) {
+                    const titleDiv = document.querySelector('.title');
+                    if (titleDiv) titleDiv.textContent = proj.name;
+
+                    const dateEl = document.querySelector('.datepro');
+                    if (dateEl) dateEl.textContent = proj.year;
+
+                    const titlePro = document.querySelector('.titlepro');
+                    if (titlePro) titlePro.innerHTML = `<br>${proj.title.replace(/ /g, '<br>')}`;
+
+                    const textPro = document.querySelector('.textpro');
+                    if (textPro) textPro.textContent = proj.description;
+
+                    const imagesCont = document.querySelector('.imagescont');
+                    if (imagesCont) {
+                        imagesCont.innerHTML = proj.images.map(src =>
+                            `<img class="image" src="${src}" alt="Image projet" />`
+                        ).join('');
+                    }
+                    const imagesCont2 = document.querySelector('.imagescont2');
+                    if (imagesCont2) {
+                        imagesCont2.innerHTML = proj.images.map(src =>
+                            `<img class="image" src="${src}" alt="Image projet" />`
+                        ).join('');
+                    }
+
+                    const lastLink = document.querySelector(".lastpro");
+                    const nextLink = document.querySelector(".nextpro");
+                    if (lastLink && idx > 0) {
+                        lastLink.querySelector("p").textContent = window.projectList[idx - 1].name;
+                        lastLink.parentElement.setAttribute("href", `./projet_template.html?id=${window.projectList[idx - 1].id}`);
+                    }
+                    if (nextLink && idx < window.projectList.length - 1) {
+                        nextLink.querySelector("p").textContent = window.projectList[idx + 1].name;
+                        nextLink.parentElement.setAttribute("href", `./projet_template.html?id=${window.projectList[idx + 1].id}`);
+                    }
+                    if (lastLink && idx === 0) {
+                        lastLink.parentElement.removeAttribute("href");
+                        lastLink.querySelector("p").textContent = "Aucun projet précédent";
+                    }
+                    if (nextLink && idx === window.projectList.length - 1) {
+                        nextLink.parentElement.removeAttribute("href");
+                        nextLink.querySelector("p").textContent = "Aucun projet suivant";
+                    }
+                } else {
+                    const titleDiv = document.querySelector('.title');
+                    if (titleDiv) titleDiv.textContent = "Projet introuvable";
+                    const textPro = document.querySelector('.textpro');
+                    if (textPro) textPro.textContent = "Ce projet n'existe pas.";
+                }
+            }
+        })
+        .catch(err => {
+            console.error('Erreur chargement projets:', err);
+            window.projectList = [];
+        });
+
+    // Si on est sur la page projet_template.html, affiche le bon projet selon l'id
+    const path = window.location.pathname;
+    if (path.includes("/pages/projet_template.html")) {
+        // Récupère l'id dans l'URL
+        const params = new URLSearchParams(window.location.search);
+        const projId = params.get("id");
+        const idx = window.projectList.findIndex((p) => p.id === projId);
+        const proj = window.projectList[idx];
+
+        if (proj) {
+            // Titre principal
+            const titleDiv = document.querySelector('.title');
+            if (titleDiv) titleDiv.textContent = proj.name;
+
+            // Année
+            const dateEl = document.querySelector('.datepro');
+            if (dateEl) dateEl.textContent = proj.year;
+
+            // Titre projet
+            const titlePro = document.querySelector('.titlepro');
+            if (titlePro) titlePro.innerHTML = `<br>${proj.title.replace(/ /g, '<br>')}`;
+
+            // Description
+            const textPro = document.querySelector('.textpro');
+            if (textPro) textPro.textContent = proj.description;
+
+            // Images principales
+            const imagesCont = document.querySelector('.imagescont');
+            if (imagesCont) {
+                imagesCont.innerHTML = proj.images.map(src =>
+                    `<img class="image" src="${src}" alt="Image projet" />`
+                ).join('');
+            }
+            // Images secondaires (mobile)
+            const imagesCont2 = document.querySelector('.imagescont2');
+            if (imagesCont2) {
+                imagesCont2.innerHTML = proj.images.map(src =>
+                    `<img class="image" src="${src}" alt="Image projet" />`
+                ).join('');
+            }
+
+            // Met à jour les liens "last" et "next"
+            const lastLink = document.querySelector(".lastpro");
+            const nextLink = document.querySelector(".nextpro");
+            if (lastLink && idx > 0) {
+                lastLink.querySelector("p").textContent = window.projectList[idx - 1].name;
+                lastLink.parentElement.setAttribute("href", `./projet_template.html?id=${window.projectList[idx - 1].id}`);
+            }
+            if (nextLink && idx < window.projectList.length - 1) {
+                nextLink.querySelector("p").textContent = window.projectList[idx + 1].name;
+                nextLink.parentElement.setAttribute("href", `./projet_template.html?id=${window.projectList[idx + 1].id}`);
+            }
+            if (lastLink && idx === 0) {
+                lastLink.parentElement.removeAttribute("href");
+                lastLink.querySelector("p").textContent = "Aucun projet précédent";
+            }
+            if (nextLink && idx === window.projectList.length - 1) {
+                nextLink.parentElement.removeAttribute("href");
+                nextLink.querySelector("p").textContent = "Aucun projet suivant";
+            }
+        } else {
+            // Si pas d'id ou id non trouvé, affiche un message d'erreur
+            const titleDiv = document.querySelector('.title');
+            if (titleDiv) titleDiv.textContent = "Projet introuvable";
+            const textPro = document.querySelector('.textpro');
+            if (textPro) textPro.textContent = "Ce projet n'existe pas.";
+        }
+    }
 });
 
 class ClickSpark {
@@ -421,3 +593,8 @@ inverseCursor.show();
 
 // Rendre accessible globalement
 window.inverseCursor = inverseCursor;
+
+// === LISTE DES PROJETS ===
+window.projectList = [
+    
+];
